@@ -10,7 +10,7 @@ require("../common.php");
 
 if (!empty($_POST)) {
     // This query retreives the user's information from the database using their username.
-    $query = "SELECT * FROM userinfo WHERE email = :email";
+    $query = "SELECT * FROM Patient WHERE email = :email";
 
     $query_params = array(
         ':email' => $_POST['email']
@@ -45,7 +45,7 @@ if (!empty($_POST)) {
         $_SESSION['user'] = $row;
         $_SESSION['action'] = 'Login';
 
-        header("Location: ../HomePage/Home.php");
+        header("Location: ../HomePage/HomePatient.php");
         exit();
     } else {
         // if invalid, head to LoginPage page

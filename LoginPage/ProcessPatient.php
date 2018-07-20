@@ -45,7 +45,7 @@ if (!empty($_POST)) {
         $_SESSION['user'] = $row;
         $_SESSION['action'] = 'Login';
 
-        header("Location: ../HomePage/HomePatient.php");
+        header("Location: ../HomePagePatient/HomePatient.php");
         exit();
     } else {
         // if invalid, head to LoginPage page

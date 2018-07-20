@@ -42,14 +42,24 @@ if (!empty($_SESSION)) {
                 <p>University of Pittsburgh</p>
             </div>
             <div class="col-sm-3 offset-sm-2 flex-last">
-                <img class="d-flex img-thumbnail align-self-center" style="height: 10em; width: 20em;" src="./src/img/logo.png" alt="logo">
+                <img class="d-flex img-thumbnail align-self-center" style="width: 100%;" src="./src/img/logo.png" alt="logo">
             </div>
         </div>
     </div>
 </div>
 
-<a role="button" class="btn btn-primary" href="LoginPage/LoginPatient.php">I am a patient</a>
-<a role="button" class="btn btn-primary" href="LoginPage/LoginDoctor.php">I am a doctor</a>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <a role="button" class="btn btn-primary  btn-block" href="LoginPage/LoginPatient.php">I am a patient</a>
+            <br>
+            <a role="button" class="btn btn-primary  btn-block" href="LoginPage/LoginDoctor.php">I am a doctor</a>
+        </div>
+    </div>
+
+</div>
+
 
 
 

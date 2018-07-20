@@ -44,7 +44,7 @@ if (!empty($_POST)) {
         unset($row['password']);
         $_SESSION['user'] = $row;
         $_SESSION['action'] = 'Login';
-        header("Location: ../HomePage/DoctorDashboard.php");
+        header("Location: ../HomePageDoctor/DoctorDashboard.php");
         exit();
     } else {
         // if invalid, head to LoginPage page

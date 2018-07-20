@@ -100,7 +100,7 @@ $row = $stmt->fetch();
             <a href="DoctorDashboard.php" class="list-group-item list-group-item-action waves-effect">
                 <i class="fa fa-pie-chart mr-3"></i>Dashboard
             </a>
-            <a href="#" class="list-group-item  list-group-item-action waves-effect">
+            <a href="DoctorProfile.php" class="list-group-item  list-group-item-action waves-effect">
                 <i class="fa fa-user mr-3"></i>Profile</a>
             <a href="DoctorPatientList.php" class="list-group-item active  waves-effect">
                 <i class="fa fa-table mr-3"></i>Patient List</a>
@@ -125,7 +125,7 @@ $row = $stmt->fetch();
                 <!-- Card image -->
                 <div class="view overlay">
                     <img class="card-img-top" style="width: 100%" src="https://social.eyeforpharma.com/sites/default/files/patient.jpg" alt="Card image cap">
-                    <a href="#!">
+                    <a href="#">
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>

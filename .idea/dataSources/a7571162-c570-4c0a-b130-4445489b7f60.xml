@@ -1073,115 +1073,32 @@
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="271" parent="252" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="272" parent="252" name="DoctorCalendar_ID_uindex">
-      <ColNames>ID</ColNames>
-      <UnderlyingIndexName>DoctorCalendar_ID_uindex</UnderlyingIndexName>
-    </key>
-    <column id="273" parent="253" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="274" parent="253" name="email">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="275" parent="253" name="name">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="276" parent="253" name="password">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="277" parent="253" name="gender">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="278" parent="253" name="age">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="279" parent="253" name="Diagnoses">
-      <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;Diagnostic Detail&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="280" parent="253" name="userinfo_ID_uindex">
-      <ColNames>ID</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="281" parent="253" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="282" parent="253" name="userinfo_ID_uindex">
-      <ColNames>ID</ColNames>
-      <UnderlyingIndexName>userinfo_ID_uindex</UnderlyingIndexName>
-    </key>
-    <column id="283" parent="254" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="284" parent="254" name="PatientID">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="285" parent="254" name="DoctorID">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="286" parent="254" name="PatientDoctor_ID_uindex">
-      <ColNames>ID</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="287" parent="254" name="PatientDoctor_Patient_ID_fk">
-      <ColNames>PatientID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="288" parent="254" name="PatientDoctor_Doctor_ID_fk">
+    <index id="271" parent="252" name="DoctorCalendar_Doctor_ID_fk">
       <ColNames>DoctorID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="289" parent="254" name="PRIMARY">
+    <index id="272" parent="252" name="DoctorCalendar_Patient_ID_fk">
+      <ColNames>PatientID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="273" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="290" parent="254" name="PatientDoctor_ID_uindex">
+    <key id="274" parent="252" name="DoctorCalendar_ID_uindex">
       <ColNames>ID</ColNames>
-      <UnderlyingIndexName>PatientDoctor_ID_uindex</UnderlyingIndexName>
+      <UnderlyingIndexName>DoctorCalendar_ID_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="291" parent="254" name="PatientDoctor_Patient_ID_fk">
+    <foreign-key id="275" parent="252" name="DoctorCalendar_Doctor_ID_fk">
+      <ColNames>DoctorID</ColNames>
+      <RefSchemaName>healthcaresystem</RefSchemaName>
+      <RefTableName>Doctor</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="276" parent="252" name="DoctorCalendar_Patient_ID_fk">
       <ColNames>PatientID</ColNames>
       <RefSchemaName>healthcaresystem</RefSchemaName>
       <RefTableName>Patient</RefTableName>
@@ -1189,7 +1106,114 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="292" parent="254" name="PatientDoctor_Doctor_ID_fk">
+    <column id="277" parent="253" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="278" parent="253" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="279" parent="253" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="280" parent="253" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="281" parent="253" name="gender">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="253" name="age">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="253" name="Diagnoses">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Diagnostic Detail&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="284" parent="253" name="userinfo_ID_uindex">
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="285" parent="253" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="286" parent="253" name="userinfo_ID_uindex">
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>userinfo_ID_uindex</UnderlyingIndexName>
+    </key>
+    <column id="287" parent="254" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="254" name="PatientID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="289" parent="254" name="DoctorID">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="290" parent="254" name="PatientDoctor_ID_uindex">
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="291" parent="254" name="PatientDoctor_Patient_ID_fk">
+      <ColNames>PatientID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="292" parent="254" name="PatientDoctor_Doctor_ID_fk">
+      <ColNames>DoctorID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="293" parent="254" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="294" parent="254" name="PatientDoctor_ID_uindex">
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PatientDoctor_ID_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="295" parent="254" name="PatientDoctor_Patient_ID_fk">
+      <ColNames>PatientID</ColNames>
+      <RefSchemaName>healthcaresystem</RefSchemaName>
+      <RefTableName>Patient</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="296" parent="254" name="PatientDoctor_Doctor_ID_fk">
       <ColNames>DoctorID</ColNames>
       <RefSchemaName>healthcaresystem</RefSchemaName>
       <RefTableName>Doctor</RefTableName>

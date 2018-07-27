@@ -8,10 +8,6 @@
 
 require("../common.php");
 
-var_dump($_POST);
-
-var_dump($_SESSION);
-
 $patientId = $_POST['patientId'];
 $doctorId = $_POST['doctorId'];
 $date = $_POST['date'];
@@ -34,7 +30,6 @@ try {
 
 // validate user and password
 $rows = $stmt->fetchAll();
-var_dump($rows);
 
 $pair = false;
 
@@ -95,4 +90,6 @@ $query_params = array(
 
 $stmt = $db->prepare($query);
 $stmt->execute($query_params);
+header("Location: AppointmentSuccess.php");
+exit();
 

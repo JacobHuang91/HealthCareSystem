@@ -50,10 +50,10 @@ if (!empty($_SESSION)) {
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
-
+        <div class="col-sm-6">
             <a role="button" class="btn btn-primary  btn-block" href="LoginPage/LoginPatient.php">I am a patient</a>
-            <br>
+        </div>
+        <div class="col-sm-6">
             <a role="button" class="btn btn-primary  btn-block" href="LoginPage/LoginDoctor.php">I am a doctor</a>
         </div>
     </div>

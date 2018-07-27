@@ -8,9 +8,6 @@
 
 require ("../common.php");
 
-if (!empty($_SESSION)) {
-    session_unset();
-}
 
 ?>
 
@@ -36,38 +33,36 @@ if (!empty($_SESSION)) {
     <div class="container">
         <div class="row">
             <div class="col-sm-5 offset-sm-2 flex-first">
-                <h3 class="display-5">Health Care System - Doctor</h3>
+                <h3 class="display-5">Health Care System - Patient</h3>
                 <p>By</p>
                 <p>School of Computing and Information</p>
                 <p>University of Pittsburgh</p>
             </div>
             <div class="col-sm-3 offset-sm-2 flex-last">
-                <img class="d-flex img-thumbnail align-self-center"  src="../src/img/Doctor.png" alt="logo">
+                <img class="d-flex img-thumbnail align-self-center" style="width: 100%;" src="../src/img/logo.png" alt="logo">
             </div>
         </div>
     </div>
 </div>
-<!--  login  -->
+
 <div class="container">
     <div class="row">
-        <div class="col-sm-8 offset-sm-2">
-            <form action="ProcessDoctor.php" method="post">
-                <div class="form-group">
-                    <label for="username">Email</label>
-                    <input type="email" class="form-control" name="email" value="doctor@gmail.com" placeholder="Email">
+        <div class="col-sm-12">
+            <div class="card text-center  grey lighten-3">
+                <div class="card-block">
+                    <h4 class="card-title">Congratulation! You have made an appointment successfully!</h4>
+                    <a href="HomePatient.php" class="btn btn-primary">Back to my dashboard</a>
                 </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Password" value="123">
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
-<br>
-<br>
+
+
+
+
+
 <!--bootstrap-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
